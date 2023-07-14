@@ -1,0 +1,35 @@
+array (
+  'update_id' => 502081138,
+  'message' => 
+  array (
+    'message_id' => 151,
+    'from' => 
+    array (
+      'id' => 1996292437,
+      'is_bot' => false,
+      'first_name' => 'Abdulaziz',
+      'last_name' => 'Nazirov',
+      'username' => 'Cyber_Senior',
+      'language_code' => 'en',
+    ),
+    'chat' => 
+    array (
+      'id' => 1996292437,
+      'first_name' => 'Abdulaziz',
+      'last_name' => 'Nazirov',
+      'username' => 'Cyber_Senior',
+      'type' => 'private',
+    ),
+    'date' => 1689314925,
+    'text' => '/start',
+    'entities' => 
+    array (
+      0 => 
+      array (
+        'offset' => 0,
+        'length' => 6,
+        'type' => 'bot_command',
+      ),
+    ),
+  ),
+)
