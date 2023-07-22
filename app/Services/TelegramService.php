@@ -44,7 +44,7 @@ class TelegramService
         else
             $reply = $this->sendAPIRequest($url, [], false);
 
-        // return json_decode($reply, true);
+        return json_decode($reply, true);
     }
 
     public function getMe()

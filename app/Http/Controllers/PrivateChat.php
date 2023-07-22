@@ -14,9 +14,14 @@ class PrivateChat extends Controller
     }
     public function handle($bot)
     {
+        if (isset($this->private_chat['message'])) {
+            $text = $this->private_chat['message']['text'];
+            $chat = $this->private_chat['message']['chat'];
+            $from = $this->private_chat['message']['from'];
+        }
         $bot->sendMessage([
-            'chat_id' => $this->private_chat['message']['chat']['id'],
-            'text' => 'ishlayapman'
+            'chat_id' => $chat['id'],
+            'text' => $text
         ]);
         return true;
     }

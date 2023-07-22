@@ -13,6 +13,7 @@ class TelegramController extends Controller
     public function handle(Request $request)
     {
         $input = $request->all();
+        
         if (isset($input['message']))
             $chat_type = $input['message']['chat']['type'] ?? null;
         elseif (isset($input['callback_query']))
@@ -20,11 +21,15 @@ class TelegramController extends Controller
 
         $bot = new TelegramService;
         if ($chat_type == 'group' or $chat_type == 'supergroup') {
+
             $run = new Group($input, $bot);
             return $run->handle();
+
         } elseif ($chat_type == 'private') {
+
             $run = new PrivateChat($input);
             return $run->handle($bot);
+
         }
     }
 }
